@@ -1,0 +1,258 @@
+/* Empty. Add your own CSS if you like */
+div.order-tabs .tab-item {
+    max-width: 50%;
+    font-size: 1.3em;
+}
+div.order-tabs a{
+    border-color: #b2b2b2;
+    background-color: #f8f8f8;
+    background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 0, transparent 50%);
+    color: #444;
+}
+div.order-tabs a.active{
+    border-color: #0a9ec7;
+    background-color: #11c1f3;
+    background-image: linear-gradient(0deg, #0a9ec7, #0a9ec7 100%, transparent 50%);
+    color: #fff;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.single-content{
+    top: 43px;
+    margin-bottom: 46px;
+}
+.confirm-header{
+    margin-top: 43px;
+    width: 100%;
+}
+.confirm-list{
+    top: 43px;
+    margin-bottom: 46px;
+    position: absolute;
+}
+
+.confirm-item-icon-padding{
+    padding-right: 10px;
+}
+
+.my-order-list{
+    top: 43px;
+    position: absolute;
+}
+
+.my-order-date{
+    display: inline-block;
+}
+
+.my-order-total{
+    display: inline-block;
+    min-width: 8em;
+}
+
+.my-order-check{
+    margin-top: 1.2em;
+    min-width: 2.5em;
+    text-align: right;
+}
+
+
+.qr-code-item{
+    text-align: center;
+}
+
+.qr-code-item > img{
+    width: 50%;
+    border: 0;
+    margin-top: 10px;
+}
+
+.qr-code-item > h4{
+    margin: 2px 0 5px 0;
+}
+
+.big-icon{
+    font-size: 1.6em !important;
+}
+
+.order-tab-content{
+    top: 94px;
+    margin-bottom: 46px;
+}
+
+.order-item{
+    padding: 5px 5px 5px 10px;
+}
+.order-item .order-img {
+    width: 70px;
+    height: 70px;
+    border: solid 1px #262626;
+    opacity: 0.9;
+}
+.order-item .order-text{
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 0 0 10px;
+}
+.order-item .order-text h2 {
+    padding-bottom: 15px;
+    font-size: 0.98em;
+}
+.order-item .order-check{
+    float: right;
+    margin-top: 1.2em;
+}
+
+.order-detail-count{
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+    font-size: 1.5em;
+}
+
+.popup-body{
+ text-align: center;
+}
+
+.map-wrapper > div{
+    height: 100%;
+}
+.baidu-map {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.growl {
+    position: absolute;
+    min-width: 11em;
+    max-width:24em;
+    width: 20.5em;
+    z-index: 2000;
+    bottom: 50px;
+    right: 10px;
+    font-size: 0.94em;
+}
+.growl .alert{
+    padding: 8px 8px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.growl .alert-danger, .growl .alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    font-weight:bold;
+}
+.growl .alert .close{
+    position: relative;
+    top: -7px;
+    right: 1px;
+}
+.growl button.close{
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+.growl-item.ng-enter,
+.growl-item.ng-leave {
+    -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transition:0.5s linear all;
+}
+.growl-item.ng-enter,
+.growl-item.ng-leave.ng-leave-active {
+    opacity:0;
+}
+.growl-item.ng-leave,
+.growl-item.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
+.icon-padding{
+    padding-right: 3px;
+}
+
+.menu-detail{
+    text-align: center;
+}
+
+.menu-detail-img{
+    margin: 1em auto 0 auto;
+    width: 85%;
+    border: solid 1px #030303;
+}
+
+.menu-detail-text{
+    margin: 0.8em auto 0 auto;
+}
+
+.menu-detail-text h2, .menu-detail-text h3 {
+    padding: 0;
+    margin:  0 0.3em 0 0;
+    display: inline-block;
+}
+
+.menu-detail-info{
+    text-align: left;
+    margin: 0.5em 1em 0 1em;
+    line-height: 180%;
+    text-indent: 2em;
+}
+
+
+.order-item .order-text-send{
+    display: inline-block;
+    vertical-align: top;
+    padding: 1px 0 0 0;
+}
+
+.order-item .order-text-send h2.order-text-name {
+    padding-left: 16px;
+    font-size: 1em;
+}
+
+.order-item .order-text-send i.order-ion-left{
+    font-weight: bolder;
+    display: inline-block;
+    padding: 0 3px 0 19px;
+    font-size: 1.5em;
+    float:left;
+}
+
+.order-item .order-text-send i.order-ion-right{
+    font-weight: bolder;
+    display: inline-block;
+    padding: 0 18px 0 3px;
+    font-size: 1.5em;
+    float:left;
+}
+
+.order-item .order-text-send .order-send-count{
+    min-width: 3em;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.98em;
+    float:left;
+    margin-top: 0.28em;
+}
+
+.order-item .order-text-send h3 {
+    padding-bottom: 0;
+    margin-top: 0.2em;
+    padding-left: 17px;
+    font-size: 0.9em;
+}

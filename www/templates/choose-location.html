@@ -1,0 +1,38 @@
+<ion-view view-title="选择取餐点">
+    <ion-nav-bar class="bar bar-balanced" align-title="center">
+    </ion-nav-bar>
+    <div class="tabs tabs-top tabs-virtual order-tabs">
+        <a href class="tab-item disable-user-behavior icon ion-map" ng-class="{active: activeContent=='map'}"
+           ng-click="setActiveContent('map')">
+            地图
+        </a>
+        <a href class="tab-item disable-user-behavior icon ion-ios-location" ng-class="{active: activeContent=='list'}"
+           ng-click="setActiveContent('list')">
+            列表
+        </a>
+    </div>
+    <ion-content class="order-tab-content map-wrapper" ng-show="activeContent=='map'">
+        <baidu-map options="mapOptions" class="baidu-map" ng-if="showMap"></baidu-map>
+    </ion-content>
+    <div growl></div>
+    <ion-content class="order-tab-content" ng-show="activeContent=='list'">
+        <div class="list" ng-if="showMap">
+            <ion-item class="item order-item" ng-repeat="marker in mapOptions.markers">
+                <label class="item item-radio">
+                    <input type="radio" name="locations" ng-value="marker" ng-model="mapOptions.current"/>
+
+                    <div class="item-content">
+                        <i class="icon ion-location icon-padding"></i> {{marker.name}}
+                    </div>
+                    <i class="radio-icon ion-checkmark-circled positive big-icon"></i>
+                </label>
+            </ion-item>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-dark">
+        <div class="button-bar bar-positive">
+            <li class="button icon icon-left ion-chevron-left" ng-click="goBack()" c>上一步</li>
+            <li class="button icon icon-right ion-chevron-right" ng-click="goNext()">下一步</li>
+        </div>
+    </div>
+</ion-view>

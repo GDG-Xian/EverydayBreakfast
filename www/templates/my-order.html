@@ -1,0 +1,22 @@
+<ion-view view-title="我的订单">
+    <ion-nav-bar class="bar bar-positive" align-title="center">
+        <ion-nav-buttons side="left">
+            <li class="button icon icon-left ion-chevron-left" ng-click="goBack()">返回</li>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="list my-order-list">
+        <ion-item class="item order-item" ng-repeat="order in orders">
+            <div class="order-text">
+                <h2>订单：{{order.code}}</h2>
+
+                <h3>
+                    <div class="my-order-total">总计：{{order.total}}元</div>
+                    <div class="my-order-date"> 时间：{{order.date | date:'yyyy-MM-dd'}}</div>
+                </h3>
+            </div>
+            <div class="order-check my-order-check" ng-click="goDetail(order.id)">
+                <i class="radio-icon ion-ios-arrow-forward royal big-icon confirm-item-icon-padding"></i>
+            </div>
+        </ion-item>
+    </ion-content>
+</ion-view>

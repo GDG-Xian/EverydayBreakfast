@@ -1,0 +1,54 @@
+<ion-view view-title="选择美味">
+    <ion-nav-bar class="bar bar-balanced" align-title="center">
+        <ion-nav-buttons side="left">
+            <li class="button icon icon-left ion-chevron-left" ng-click="goBack()">退出</li>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <li class="button icon icon-right ion-ios-cart-outline" ng-click="goOrder()">我的订单</li>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <div class="tabs tabs-top tabs-virtual order-tabs">
+        <a href class="tab-item disable-user-behavior icon ion-android-bar" ng-class="{active: activeContent=='package'}" ng-click="setActiveContent('package')">
+            套餐
+        </a>
+        <a href class="tab-item disable-user-behavior icon ion-pizza" ng-class="{active: activeContent=='single'}" ng-click="setActiveContent('single')">
+            单点
+        </a>
+    </div>
+    <ion-content class="order-tab-content" ng-show="activeContent=='package'">
+        <div class="list" ng-if="packageData != null && packageData.length >0">
+            <ion-item  class="item order-item" ng-repeat="menu in packageData">
+                <img class="order-img" ng-src="{{menu.src}}" ng-click="goDetail(menu.id)" />
+                <div class="order-text-send">
+                    <h2 class="order-text-name">{{menu.name}}</h2>
+                    <h3>{{menu.price}}元</h3>
+                    <h2><i class="icon ion-minus-round positive order-ion-left" ng-click="subCount(menu.id)"></i><div class="order-send-count assertive">{{menu.count}} 份</div> <i class="icon ion-plus-round balanced order-ion-right" ng-click="addCount(menu.id)"></i></h2>
+                </div>
+                <label class="checkbox order-check">
+                    <input type="checkbox" ng-model="menu.selected" ng-click="getTotal()">
+                </label>
+            </ion-item>
+        </div>
+    </ion-content>
+    <ion-content class="order-tab-content" ng-show="activeContent=='single'">
+        <div class="list" ng-if="singleData != null && singleData.length >0">
+            <ion-item  class="item order-item" ng-repeat="menu in singleData">
+                <img class="order-img" ng-src="{{menu.src}}" ng-click="goDetail(menu.id)" />
+                <div class="order-text-send">
+                    <h2 class="order-text-name">{{menu.name}}</h2>
+                    <h3>{{menu.price}}元</h3>
+                    <h2><i class="icon ion-minus-round positive order-ion-left" ng-click="subCount(menu.id)"></i><div class="order-send-count assertive">{{menu.count}} 份</div><i class="icon ion-plus-round balanced order-ion-right" ng-click="addCount(menu.id)"></i></h2>
+                </div>
+                <label class="checkbox order-check">
+                    <input type="checkbox" ng-model="menu.selected" ng-click="getTotal()">
+                </label>
+            </ion-item >
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-dark">
+        <div class="button-bar bar-positive">
+            <li class="button icon ion-social-yen-outline">总计：{{total}}元</li>
+            <li class="button icon icon-right ion-chevron-right" ng-click="goNext()">下一步</li>
+        </div>
+    </div>
+</ion-view>

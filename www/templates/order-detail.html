@@ -1,0 +1,43 @@
+<ion-view view-title="订单:{{data.code}}">
+    <ion-nav-bar class="bar bar-positive" align-title="center">
+        <ion-nav-buttons side="left">
+            <li class="button icon icon-left ion-chevron-left" ng-click="goBack()">返回</li>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="list confirm-list">
+        <div>
+            <div class="qr-code-item">
+                <img ng-src="{{data.qrSrc}}"/>
+                <h4> {{data.code}} </h4>
+            </div>
+            <div class="item item-stable item-icon-left">
+                <i class="icon ion-compass icon-padding"></i> 取餐地点: {{data.location}}
+            </div>
+            <div class="item item-light item-icon-left">
+                <i class="icon ion-clock icon-padding"></i> 取餐时间: {{data.pickTime}}
+            </div>
+            <div class="item item-stable item-icon-left">
+                <i class="icon ion-social-yen-outline icon-padding"></i> 金额总计: {{data.total}}
+            </div>
+            <div class="item item-light item-icon-left">
+                <i class="icon ion-ios-calendar-outline icon-padding"></i> 订单时间: {{data.date | date:'yyyy-MM-dd'}}
+            </div>
+            <div class="item item-calm item-divider">
+                订单明细
+            </div>
+        </div>
+        <ion-item class="item order-item" ng-repeat="order in data.orders">
+            <img class="order-img" ng-src="{{order.src}}" ng-click="goDetail(order.id)"/>
+
+            <div class="order-text">
+                <h2>{{order.name}}</h2>
+
+                <h3>{{order.price}}元</h3>
+            </div>
+            <div class="order-check" ng-click="goDetail(order.id)">
+                <div class="order-detail-count">{{order.count}} 份</div>
+                <i class="radio-icon ion-ios-arrow-forward calm big-icon confirm-item-icon-padding"></i>
+            </div>
+        </ion-item>
+    </ion-content>
+</ion-view>

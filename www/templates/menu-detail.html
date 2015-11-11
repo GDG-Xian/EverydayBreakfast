@@ -1,0 +1,21 @@
+<ion-view view-title="{{data.name}}">
+    <ion-nav-bar class="bar bar-positive" align-title="center">
+        <ion-nav-buttons side="left">
+            <li class="button icon icon-left ion-chevron-left" ng-click="goBack()">返回</li>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="list confirm-list" ng-show="data != null">
+        <div class="menu-detail">
+            <img class="menu-detail-img" ng-src="{{data.bigSrc}}"/>
+
+            <div class="menu-detail-text">
+                <h2>{{data.name}}</h2>
+
+                <h3>{{data.price}}元</h3>
+            </div>
+            <div class="menu-detail-info">
+                {{data.info}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

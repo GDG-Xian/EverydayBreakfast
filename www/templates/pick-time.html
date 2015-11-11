@@ -1,0 +1,24 @@
+<ion-view view-title="选择取餐时间">
+    <ion-nav-bar class="bar bar-balanced" align-title="center">
+    </ion-nav-bar>
+    <ion-content class="single-content">
+        <div class="list">
+            <ion-item class="item order-item" ng-repeat="time in pickTimes">
+                <label class="item item-radio">
+                    <input type="radio" name="pickTimes" ng-value="time" ng-model="pickTimes.selected"/>
+
+                    <div class="item-content">
+                        <i class="icon ion-android-time icon-padding"></i> {{time.name}}
+                    </div>
+                    <i class="radio-icon ion-checkmark-circled positive big-icon"></i>
+                </label>
+            </ion-item>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-dark">
+        <div class="button-bar bar-positive">
+            <li class="button icon icon-left ion-chevron-left" ng-click="goBack()" c>上一步</li>
+            <li class="button icon icon-right ion-chevron-right" ng-click="goNext()">下一步</li>
+        </div>
+    </div>
+</ion-view>
